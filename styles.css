@@ -1,0 +1,10 @@
+.donation{
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media screen  {
+    {max-width: 100px
+}
