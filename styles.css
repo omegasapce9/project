@@ -1,10 +1,23 @@
-.donation{
-    background-color: aqua;
-    padding: 20px;
+.header{
+    background-color: yellow;
+    
+    padding: 25px;
     text-align: center;
+}
+.mainpage {
+   
+    
+     
+    width: auto;
+    height: auto;
 }
 
 
-@media screen  {
-    {max-width: 100px
+
+
+@media screen  and (max-width:400px){
+    
+        
+    }
+   
 }
