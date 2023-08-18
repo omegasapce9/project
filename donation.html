@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate to Our Cause</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .donation-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .donation-amount {
+    margin: 10px 0;
+  }
+  .donate-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Donate to Our Cause</h1>
+  <p>Your support makes a difference!</p>
+  
+  <div class="donation-form">
+    <h2>Make a Donation</h2>
+    <p>Select an amount:</p>
+    
+    <div class="donation-amount">
+      <label>
+        <input type="radio" name="amount" value="10"> $10
+      </label>
+      <label>
+        <input type="radio" name="amount" value="25"> $25
+      </label>
+      <label>
+        <input type="radio" name="amount" value="50"> $50
+      </label>
+      <label>
+        <input type="radio" name="amount" value="custom"> Custom
+      </label>
+    </div>
+    
+    <div id="custom-amount" style="display: none;">
+      <label for="custom">Enter custom amount:</label>
+      <input type="number" id="custom" name="custom" step="any">
+    </div>
+    
+    <button class="donate-button" id="donateButton">Donate Now</button>
+  </div>
+</div>
+
+<script>
+  const customAmountField = document.getElementById('custom-amount');
+  const customAmountInput = document.getElementById('custom');
+  const donateButton = document.getElementById('donateButton');
+
+  // Show custom amount field when "Custom" is selected
+  document.querySelector('input[name="amount"][value="custom"]').addEventListener('change', () => {
+    customAmountField.style.display = 'block';
+  });
+
+  // Hide custom amount field for other options
+  document.querySelectorAll('input[name="amount"]:not([value="custom"])').forEach(input => {
+    input.addEventListener('change', () => {
+      customAmountField.style.display = 'none';
+    });
+  });
+
+  // Handle donation button click
+  donateButton.addEventListener('click', () => {
+    const selectedAmount = document.querySelector('input[name="amount"]:checked').value;
+    const donationAmount = selectedAmount === 'custom' ? customAmountInput.value : selectedAmount;
+    // Perform actions to process the donation (e.g., send data to a server)
+    // Replace this with your actual donation processing logic
+
+    // For demonstration purposes, display an alert with the donation amount
+    alert(`Thank you for donating $${donationAmount}!`);
+  });
+</script>
+</body>
+</html>
