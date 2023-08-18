@@ -212,6 +212,12 @@ ul li.active a {
     margin: 10px 5%;
     
 }
+.projects .projects-items{
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+}
+
 .projects .projects-items1{
 
     flex-basis: 80%;
