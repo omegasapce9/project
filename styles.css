@@ -25,6 +25,7 @@ a{
     background-position:top  center;
     position: relative;
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(./img/rino.jpg);
+    background-color: aliceblue;
 
 
     
@@ -217,6 +218,7 @@ ul li.active a {
     text-align: left;
     color: #fff;
 }
+
 
 .projects .projects-items1{
 
