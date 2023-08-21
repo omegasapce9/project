@@ -487,19 +487,57 @@ ul li.active a {
 
 @media only screen and (min-width:400px)
 {
-    .start {
-        width: auto;
-        height: aoto;
-        max-width: ;
-        
-        
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+
     }
-    .PAGE2 .video{
-        max-width: auto;
-        height: auto;
+    h1.section-title{
+        font-size: 6rem;
     }
 
+    #start h1{
+        font-size: 7rem;
+    }
+
+    #project .projects-bottom .projects-items{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #project .projects-bottom .projects-items1{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #project .projects-bottom .projects-items2{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #project .projects-bottom .projects-items3{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #project .projects-bottom .projects-items4{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
     
-
+#events .events-items{
+    flex-direction: column;
+}
+#events .events-items{
+    height: 100%;
+    margin: 400px;
+    width: 100%;
+    border-radius: 0;
 
 }
+
+#events .all-events .events-info{
+    height: 50%;
+
+}
+#events .all-events .events-img{
+    height: 50%;
+}
+}
+
