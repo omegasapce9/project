@@ -31,6 +31,123 @@ a{
  .section-title span{
     color: crimson;
 }
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color,color;
+
+}
+.cta:hover{
+    color: white;
+    background-color: crimson;
+
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+
+}
+#header .brand img{
+    height: 100px;
+    width: 140px;
+}
+#header .header{
+    min-height: 8vh;
+    background-color: rgba(31,30,30,0.24);
+
+}
+.header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31,30,30);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 1;
+    overflow: hidden;
+}
+#header .nav-list ul a  {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display:black;
+
+}
+
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0);
+    color: rgba(240, 248,255,0.021);
+    font-size: 13rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease  letter-spacing;
+
+
+}
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%,-50%)scale(1);
+    letter-spacing: initial;
+}
+ 
+#header .hamburger {
+    
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius:50% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#header .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -5;
+
+}
+
 
 
 
@@ -117,57 +234,6 @@ header{
     
 }
 
-.center
-{display: block;}
-
-.center h1 span{
-    position: absolute;
-    top: 0;
-
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: crimson;
-   
-    
-}
-
-
-ul{
-    float: right;
-    list-style: none;
-    margin-top: 25px;
-}
-ul li {
-    display: inline-block;
-}
-ul li a{
-    text-decoration: none;
-    transition: 0.4s ease;
-    color: #fff;
-    padding: 5px 20px;
-    
-    border: 1px solid #fff;
-    
-}
-ul li a:hover{
-    background-color: white;
-    color: black;
-}
-ul li.active a {
-    background-color: white;
-    color: black
-
-}
-.logo img{
-    float: left;
-    width: 150px;
-    height: auto;
-}
-.main {
-    max-width: 1600px;
-    margin: auto;
-}
 
 @keyframes text_reveal_box {
     50%{
@@ -509,7 +575,7 @@ ul li.active a {
 
 
 
-@media only screen and (min-width:400px)
+@media only screen and (min-width:786px)
 {
     .cta{
         font-size: 2.5rem;
@@ -528,13 +594,8 @@ ul li.active a {
     #events .events-items {
         flex-direction: row  ;
     }
-    #PAGE2>video {
-        height: 400px;
-    }
-
-
-
-
+   
+ 
     #events .events-items{
         height: 400px;
         margin: 0;
@@ -552,7 +613,13 @@ ul li.active a {
     }
 
     
+}
+
+@media only screen and (min-height:1200px){
 
 
-
+#projects .projects-bottom .projects-items{
+    flex-basis: 22%;
+    margin: 1.5%;
+}
 }
