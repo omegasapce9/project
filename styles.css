@@ -255,7 +255,7 @@ header{
 
 
 /*project*/
-.projects {
+#projects {
 
 }
 #projects .projects {
@@ -268,7 +268,7 @@ header{
     
 
 }
-.projects .section-title{
+#projects .section-title{
     font-size: 4rem;
     font-weight: 500;
     color: black;
@@ -278,134 +278,65 @@ header{
     text-align: center;
 
 }
-.projects .section-title span{
+#projects .section-title span{
     color: crimson;
-}
-.projects .projects-items{
-
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    
-    flex-direction: column;
-    padding: 200px;
-    border-radius: 10px;
-    background-image: url(./img/project\ item\ 2.jpg);
-    background-size: cover;
-    margin: 10px 5%;
     
 }
-.projects .projects-items{
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
-}
-
-
-.projects .projects-items1{
-
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    
-    flex-direction: column;
-    padding: 200px;
-    border-radius: 10px;
-    background-image: url(./img/project\ iteam\ 1.jpg);
-    background-size: cover;
-    margin: 10px 5%;
-    
-}
-
-
-.projects .projects-items1{
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
-}
-.projects .projects-items2{
-
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    
-    flex-direction: column;
-    padding: 200px;
-    border-radius: 10px;
-    background-image: url(./img/projet\ itam\ 3.jpg);
-    background-size: cover;
-    margin: 10px 5%;
-    
-}
-.projects .projects-items2{
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
-}
-.projects .projects-items3{
-
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    
-    flex-direction: column;
-    padding: 200px;
-    border-radius: 10px;
-    background-image: url(./img/v68vjyus.bmp);
-    background-size: cover;
-    margin: 10px 5%;
-    
-}
-.projects .projects-items3{
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
-}
-.projects .projects-items4{
-
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    
-    flex-direction: column;
-    padding: 200px;
-    border-radius: 10px;
-    background-image: url(./img/project\ iteam\ 5.webp);
-    background-size: cover;
-    margin: 10px 5%;
-    
-}
-.projects .projects-items4{
-    font-size: 20px;
-    text-align: left;
-    color: #fff;
-}
-.projects .projects-items p{
-    color: #fff;
-    font-size: 20px;
-}
-.projects .projects-items h2{
-    color: #fff;
-    font-size: 30px;
-}
-
-.projects .projects-top p{
-    color: black;
+#projects .section-top span{
     font-size: 1.4rem;
     margin-top: 5px;
     line-height: 2.5rem;
-    font-weight: 300;
+    font-weight: 300px;
     letter-spacing: 0.5rem;
-
 }
-.projects .projects-bottom{
+
+
+#projects .projects-items{
+
+    flex-basis: flex;
+    display: flex;
+    align-items: flex-start;
+    
+    flex-direction: column;
+    padding: 200px;
+    border-radius: 10px;
+    background-image: url(./img/bamboo_green_vector_nature_digital_art_artwork_simple_background-257466.jpeg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    
+}
+#projects .projects-bottom{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
 
 }
+#projects .projects-items::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    opacity: -8;
+    z-index: -1;
+
+}
+#projects .projects-bottom .projects-items .icons   {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+
+}
+#project .projects-bottom .projects-items.icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 /*event section*/
@@ -594,6 +525,10 @@ header{
     #events .events-items {
         flex-direction: row  ;
     }
+    #projects .projects-bottom .projects-items{
+        flex-basis: 45% ;
+        margin: 2.5%;
+    }
    
  
     #events .events-items{
@@ -616,6 +551,7 @@ header{
 }
 
 @media only screen and (min-height:1200px){
+
 
 
 #projects .projects-bottom .projects-items{
